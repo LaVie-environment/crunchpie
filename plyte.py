@@ -53,7 +53,7 @@ def getSevSegStr(number, minWidth=0):
             rows[0] += ' __ '
             rows[1] += '|__|'
             rows[2] += '|__|'
-        elif numeral == '9:' # Render the 9.
+        elif numeral == '9': # Render the 9.
             rows[0] += ' __ '
             rows[1] += '|__|'
             rows[2] += ' __|'
@@ -67,5 +67,13 @@ def getSevSegStr(number, minWidth=0):
 
     return '\n'.join(rows)
 
+
+# If this program is not being imported, display the numbers 00 to 99.
+if __name__ == '__main__':
+    print('This module is meant to be imorted rather than run.')
+    #print('     import seveseg')
+    myNumber = getSevSegStr(42, 3)
+    print(myNumber)
+    print()
 
     
